@@ -15,6 +15,29 @@
   <!-- Firebase: dùng để đồng bộ dữ liệu thời gian thực giữa GV và phụ huynh -->
   <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+<script>
+    // Cấu hình Firebase cho dự án doanvanlam-291079
+    const firebaseConfig = {
+      apiKey: "AIzaSyB613shW1fyYqMSS3pT-yVUihtnOV1AaD4",
+      authDomain: "doanvanlam-291079.firebaseapp.com",
+      // Đường dẫn Realtime Database (thay đổi nếu database của bạn nằm ở khu vực ngoài Mỹ)
+      databaseURL: "https://doanvanlam-291079-default-rtdb.firebaseio.com",
+      projectId: "doanvanlam-291079",
+      storageBucket: "doanvanlam-291079.firebasestorage.app",
+      messagingSenderId: "938532920912",
+      appId: "1:938532920912:web:5cb701ff5dfb9aefc9fb55",
+      measurementId: "G-790H8XL90T"
+    };
+
+    // Khởi tạo Firebase nếu chưa được khởi tạo
+    try {
+      if (!firebase.apps || !firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+      }
+    } catch (e) {
+      console.warn("Lỗi khởi tạo Firebase:", e);
+    }
+  </script>
   <style>
     :root {
       --primary-color: #f97316;
